@@ -1,7 +1,7 @@
 #!/bin/bash
 
 TETHER_IP_ADDR1="192.168.43.1"
-TETHER_IP_ADDR2="192.168.43.2"
+TETHER_IP_ADDR2="192.168.44.2"
 
 enable_tethering()
 {
@@ -83,6 +83,7 @@ EOF
 
 cat << EOF > /tmp/dnsmasq_${1}.conf
 dhcp-range=192.168.43.3,192.168.43.150,255.255.255.0
+dhcp-range=192.168.44.3,192.168.44.150,255.255.255.0
 enable-dbus
 group=system
 user=system
